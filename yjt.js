@@ -1,5 +1,5 @@
 [rewrite_local]
-^https?:\/\/(jietu6|1jietu)\.com\/apiv2\/user url script-response-body https://raw.githubusercontent.com/andyeasons/quanx/main/yjt.js
+^https?:\/\/(jietu6|1jietu)\.com\/apiv2\/user url script-response-body https://raw.githubusercontent.com/andyeason/quanx/main/yjt.js
 
 [MITM]
 hostname = jietu6.com, 1jietu.com
