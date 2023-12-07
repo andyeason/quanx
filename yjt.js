@@ -1,4 +1,3 @@
-tag= 易截图2
 [MITM]
 hostname = jietu6.com, 1jietu.com
 
