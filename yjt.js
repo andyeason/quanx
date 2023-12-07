@@ -3,7 +3,7 @@ tag= 易截图2
 hostname = jietu6.com, 1jietu.com
 
 [rewrite_local]
-^https?:\/\/(jietu6|1jietu)\.com\/apiv2\/user url script-response-body https://proxy.cxandy.com/https://raw.githubusercontent.com/andyeasons/quanx/main/yjt.js
+^https?:\/\/(jietu6|1jietu)\.com\/apiv2\/user url script-response-body https://proxy.cxandy.com/https://raw.githubusercontent.com/andyeason/quanx/main/yjt.js
 
 var iosjs = JSON.parse($response.body);
 iosjs.info.group_id = "3";
