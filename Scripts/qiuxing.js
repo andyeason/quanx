@@ -2,7 +2,6 @@
 // ^https?:\/\/qiuxinkaifa\.com\/index\.php\/Api\/activity\/StarDetail
 // 解锁球星数据
 const url = $request.url;
-if (!$response.body) $done({});
 var body = $response.body; 
 console.log(`解锁球星数据前----: ` + body);
 
