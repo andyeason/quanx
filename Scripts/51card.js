@@ -1,13 +1,21 @@
-let Zoo = JSON.parse($response.body);
+// 去除首页横幅广告，去除我的广告（只保留设置，个人资料）
 
-let item = [
- "userBootstrapConfigResp", 
- "operationResourceDTO",
- 
-];
-if (Zoo) {
-  item.forEach((i) => {
-delete Zoo[i];
-});
+if (!$response.body) {
+  $done({});
 }
-$done({ body: JSON.stringify(Zoo) });
+const url = $request.url;
+let obj = JSON.parse($response.body);
+
+if (obj?.operationResourceDTO) {
+  obj.operationResourceDTO = [];
+}
+
+if (url.includes("api.u51.com/generic-config-gateway/api")) {
+  if (obj?.meTabConfigExts) {
+    let reserve = ['设置']
+    obj.meTabConfigExts = obj.meTabConfigExts.filter(item => reserve.includes(item.meTabConfigs[0].title));
+  }
+}
+
+body = JSON.stringify(obj);
+$done({body});
