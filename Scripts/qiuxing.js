@@ -3,6 +3,6 @@
 // 解锁球星数据
 var body = $response.body; 
 //console.log(`解锁球星数据前----: ` + body);
-body = body.replace("\"pubver\":0","\"pubver\":3");
+body = body.replace("\"pubver\":0","\"pubver\":3").replace("\"pubverTeam\":0","\"pubverTeam\":3");
 //console.log(`解锁球星数据后----: ` + body);
 $done(body); 
