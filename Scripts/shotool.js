@@ -5,6 +5,7 @@ if (!$response.body) {
 }
 const url = $request.url;
 let obj = JSON.parse($response.body);
+console.log(obj);
 
 if (url.includes("mod=banners")) {
   if (obj?.data) {
