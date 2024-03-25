@@ -5,9 +5,7 @@ const url = $request.url;
 let obj = JSON.parse($response.body);
 
 if (url.includes("mod=config")) {
-  if (obj?.data) {
-	delete obj.data.modalNotice;
-  }
+	obj.data.modalNotice.show = false;
 }
 
 body = JSON.stringify(obj);
