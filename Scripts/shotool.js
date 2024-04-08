@@ -3,10 +3,8 @@ if (!$response.body) {
 }
 const url = $request.url;
 let obj = JSON.parse($response.body);
+	obj.data.vipExpire = "2029-04-08 10:30:00";
 
-if (url.includes("mod=config")) {
-	obj.data.modalNotice.show = false;
-}
 
 body = JSON.stringify(obj);
 $done({body});
