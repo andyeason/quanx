@@ -3,11 +3,9 @@
 [rewrite_local]
 ^https?:\/\/api\.account\.meitu\.com\/users\/show_current\.json|https?:\/\/api-sub\.meitu\.com\/v2\/user\/info_by_entrance\.json|https?:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info\.json|https?:\/\/api\.dreamavatar\.com\/v1\/api\/2d\/product\/query|https?:\/\/api\.dreamavatar\.com\/v1\/api\/2d\/ai\/video\/pretreate|https?:\/\/api\.dreamavatar\.com\/v1\/api\/2d\/user\/rights|https?:\/\/api\.dreamavatar\.com\/v1\/api\/2d\/ai\/video\/generate.*? url script-response-body https://raw.githubusercontent.com/andyeason/quanX/main/Scripts/kaipai.js
 
-
 [mitm]
-hostname = api.account.meitu.com,api-sub.meitu.com,api-sub.meitu.com,api.dreamavatar.com,api.dreamavatar.com,api.dreamavatar.com,api.dreamavatar.com
-%¥
-*******************************/
+hostname = api.account.meitu.com, api-sub.meitu.com, api.dreamavatar.com
+*/
 var body=$response.body;
 body = body.replace(/"has_recharge\":\w+/g,'"has_recharge":true');
 body = body.replace(/"has_income\":\w+/g,'"has_income":true');
