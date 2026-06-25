@@ -1,5 +1,5 @@
 /**
- * kaipai.js - 完整数据版
+ * kaipai.js
  */
 const url = $request.url;
 
