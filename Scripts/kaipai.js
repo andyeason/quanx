@@ -1,10 +1,10 @@
 /**
- * kaipai.js - 完整版
+ * kaipai.js
  */
 const url = $request.url;
 let body = $response.body;
 
-// 1. new_sub_detail.json - 包含完整的 materials 和 prices
+// 1. new_sub_detail.json 
 if (url.includes("/v1/h5/vip/new_sub_detail.json")) {
     $done({ body: JSON.stringify({
         "error_code": 0, "ret": 0, "degrade": 0,
